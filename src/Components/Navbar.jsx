@@ -57,6 +57,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/feed" className="justify-between hover:bg-gray-800 rounded-md p-2">
+                    Feed <span className="badge badge-success">Feed</span>
+                  </Link>
+                </li>
+                <li>
                   <Link to="/connections" className="justify-between hover:bg-gray-800 rounded-md p-2">
                     Connections <span className="badge badge-error">💗</span>
                   </Link>
@@ -64,6 +69,11 @@ const Navbar = () => {
                 <li>
                   <Link to="/requests" className="justify-between hover:bg-gray-800 rounded-md p-2">
                     Requests <span className="badge badge-warning">👁️</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/premium" className="justify-between hover:bg-gray-800 rounded-md p-2">
+                    Premium <span className="badge badge-warning">⭐</span>
                   </Link>
                 </li>
                 <li>

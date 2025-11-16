@@ -7,7 +7,6 @@ import { addRequests, removeRequest } from "../utils/requestSlice";
 const Requests = () => {
   const dispatch = useDispatch();
   const requests = useSelector((store) => store.request);
-  console.log(requests);
 
   const reviewRequest = async (status, _id) => {
     try {
@@ -28,7 +27,6 @@ const Requests = () => {
         withCredentials: true,
       });
       dispatch(addRequests(requests.data.connectionRequests));
-      //   console.log(requests.data.connectionRequests);
     } catch (error) {
       console.log(error);
     }

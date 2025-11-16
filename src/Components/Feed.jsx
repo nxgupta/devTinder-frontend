@@ -8,7 +8,6 @@ import UserCard from "./UserCard";
 const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector((store) => store.feed);
-  console.log(feed);
   const getFeed = async () => {
     if (feed) return;
     try {
@@ -16,7 +15,6 @@ const Feed = () => {
         withCredentials: true,
       });
       dispatch(addFeed(feed.data));
-      console.log(feed);
     } catch (err) {
       console.log(err);
     }
@@ -35,7 +33,6 @@ const Feed = () => {
     feed && (
       <div className="flex flex-col items-center gap-4 my-5">
         {feed && feed.map((user) => <UserCard key={user._id} user={user} />)}
-        {/* <UserCard user={feed[0]} /> */}
       </div>
     )
   );

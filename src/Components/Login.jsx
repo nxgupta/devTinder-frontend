@@ -25,7 +25,6 @@ const Login = () => {
         },
         { withCredentials: true }
       );
-      // console.log(res.data.user)
       dispatch(addUser(res.data.user));
       return navigate("/");
     } catch (err) {
@@ -48,7 +47,6 @@ const Login = () => {
           withCredentials: true,
         }
       );
-      console.log(res);
       dispatch(addUser(res.data.data));
       return navigate("/profile");
     } catch (error) {

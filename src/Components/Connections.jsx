@@ -5,11 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addConnection, removeConnection } from "../utils/connectionSlice";
 
 const Connections = () => {
- 
+
   const connections = useSelector((store) => store.connection);
-  console.log(connections);
   const dispatch = useDispatch();
-  
+
   const fetchConnections = async () => {
     try {
       dispatch(removeConnection());
@@ -17,7 +16,6 @@ const Connections = () => {
         withCredentials: true,
       });
       dispatch(addConnection(connections.data.data));
-      //   console.log(connections.data.data);
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +39,7 @@ const Connections = () => {
     <div className=" text-center my-10">
       <h1 className="font-bold text-3xl text-pink-400">Connections ({connections.length})</h1>
       {connections.map((connection) => {
-        const {_id, firstName, lastName, photoURL, age, gender, about } =
+        const { _id, firstName, lastName, photoURL, age, gender, about } =
           connection;
 
         return (
